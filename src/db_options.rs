@@ -45,6 +45,7 @@ impl Drop for SstPartitionerFactory {
 }
 
 unsafe impl Send for SstPartitionerFactory {}
+unsafe impl Sync for SstPartitionerFactory {}
 
 impl SstPartitionerFactory {
     pub fn new(len: i64) -> Self {
